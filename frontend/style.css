@@ -456,3 +456,87 @@ body {
         height: 290px;
     }
 }
+
+/* Filter and Sort Panel */
+.filter-panel {
+    margin-bottom: 28px;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.filter-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.filter-field label {
+    color: #344054;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.filter-field select,
+.filter-field input {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 11px 12px;
+    border: 1px solid #dfe3eb;
+    border-radius: 9px;
+    background: #fff;
+    color: #172033;
+    font: inherit;
+    font-size: 13px;
+    outline: none;
+}
+
+.filter-field select:focus,
+.filter-field input:focus {
+    border-color: #6655e8;
+    box-shadow: 0 0 0 3px rgba(102, 85, 232, 0.12);
+}
+
+.filter-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.reset-button {
+    padding: 11px 18px;
+    border: 1px solid #dfe3eb;
+    border-radius: 9px;
+    background: #fff;
+    color: #344054;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.filter-message {
+    margin: 12px 0 0;
+    color: #667085;
+    font-size: 12px;
+}
+
+@media (max-width: 900px) {
+    .filter-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-actions {
+        flex-wrap: wrap;
+    }
+}
