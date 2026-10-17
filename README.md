@@ -85,7 +85,7 @@ SalesView/
 │   └── dashboard.js
 ├── .env
 ├── .gitignore
-├── requirements.txt
+├── requirement.txt
 └── README.md
 ```
 
@@ -130,10 +130,10 @@ Jika menggunakan Command Prompt:
 
 ### 3. Instal Dependensi
 
-Pastikan file dependensi bernama `requirements.txt`, kemudian jalankan:
+Pastikan file dependensi bernama `requirement.txt`, kemudian jalankan:
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirement.txt
 ```
 
 ### 4. Siapkan Database
