@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SalesView | Sales Analytics</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/dashboard.js" defer></script>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">S</div>
+            <div>
+                <h2>SalesView</h2>
+                <p>Analytics Platform</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="/" class="nav-item active">▦ Dashboard</a>
+            <div class="nav-label">ANALYTICS</div>
+            <a href="#revenue-section" class="nav-item">↗ Revenue Trends</a>
+            <a href="#products-section" class="nav-item">▤ Top Products</a>
+            <a href="#countries-section" class="nav-item">◎ Countries</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="status-dot"></span>
+            Database Connected
+            <p>PostgreSQL · MongoDB</p>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">OVERVIEW</p>
+                <h1>Sales Dashboard</h1>
+                <p class="subtitle">Monitor your sales performance and business insights.</p>
+            </div>
+            <button id="refresh-button" class="refresh-button">
+                ↻ Refresh Data
+            </button>
+        </header>
+
+        <section class="welcome-banner">
+            <div>
+                <p class="banner-label">SALES PERFORMANCE</p>
+                <h2>Understand your business better.</h2>
+                <p>Explore revenue trends, products, and geographic performance.</p>
+            </div>
+            <div class="banner-symbol">↗</div>
+        </section>
+
+        <section class="section-heading">
+            <div>
+                <h2>Key Metrics</h2>
+                <p>Overview of recorded sales transactions</p>
+            </div>
+            <span id="last-updated">Waiting for data...</span>
+        </section>
+
+        <section class="kpi-grid">
+            <article class="kpi-card">
+                <div class="kpi-top">
+                    <span>Total Revenue</span>
+                    <span class="kpi-icon purple">£</span>
+                </div>
+                <h2 id="total-revenue">—</h2>
+                <p>Recorded sales revenue</p>
+            </article>
+
+            <article class="kpi-card">
+                <div class="kpi-top">
+                    <span>Total Invoices</span>
+                    <span class="kpi-icon blue">▤</span>
+                </div>
+                <h2 id="total-invoices">—</h2>
+                <p>Unique invoice numbers</p>
+            </article>
+
+            <article class="kpi-card">
+                <div class="kpi-top">
+                    <span>Unique Customers</span>
+                    <span class="kpi-icon green">♙</span>
+                </div>
+                <h2 id="total-customers">—</h2>
+                <p>Identified customers</p>
+            </article>
+
+            <article class="kpi-card">
+                <div class="kpi-top">
+                    <span>Units Sold</span>
+                    <span class="kpi-icon orange">▦</span>
+                </div>
+                <h2 id="units-sold">—</h2>
+                <p>Total units in recorded sales</p>
+            </article>
+        </section>
+
+        <section class="chart-grid">
+            <article class="panel" id="revenue-section">
+                <div class="panel-heading">
+                    <div>
+                        <h2>Revenue Trend</h2>
+                        <p>Monthly revenue over time</p>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="revenue-chart"></canvas>
+                </div>
+            </article>
+
+            <article class="panel" id="products-section">
+                <div class="panel-heading">
+                    <div>
+                        <h2>Top Products</h2>
+                        <p>Ranked by revenue</p>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="products-chart"></canvas>
+                </div>
+            </article>
+        </section>
+
+        <section class="panel country-panel" id="countries-section">
+            <div class="panel-heading">
+                <div>
+                    <h2>Revenue by Country</h2>
+                    <p>Top 10 countries by recorded revenue</p>
+                </div>
+            </div>
+            <div class="chart-container country-chart">
+                <canvas id="countries-chart"></canvas>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <p>SalesView · Hybrid Database Analytics</p>
+            <p>Historical dataset · Online Retail</p>
+        </footer>
+    </main>
+</body>
+</html>
