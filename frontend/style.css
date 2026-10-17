@@ -48,17 +48,18 @@ body {
     padding: 0 8px 38px;
 }
 
-.brand-icon {
-    display: grid;
-    place-items: center;
-    width: 42px;
-    height: 42px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #8276ff, #5745d9);
-    font-size: 22px;
-    font-weight: 800;
+.brand-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 .brand h2 {
     font-size: 19px;
     letter-spacing: -0.5px;
