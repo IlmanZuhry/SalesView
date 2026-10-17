@@ -62,6 +62,57 @@
             </div>
             <span id="last-updated">Waiting for data...</span>
         </section>
+        
+        <!-- Filter dan Sort Controls -->
+        <section class="panel filter-panel" id="filter-section">
+            <div class="panel-heading">
+                <div>
+                    <h2>Filter &amp; Sort</h2>
+                    <p>Customize your sales analytics</p>
+                </div>
+            </div>
+
+            <div class="filter-grid">
+                <div class="filter-field">
+                    <label for="sort-by">Sort By</label>
+                    <select id="sort-by">
+                        <option value="revenue">Revenue</option>
+                        <option value="date">Transaction Date</option>
+                        <option value="quantity">Quantity Sold</option>
+                        
+                    </select>
+                </div>
+
+                <div class="filter-field">
+                    <label for="country-filter">Country</label>
+                    <select id="country-filter">
+                        <option value="all">All Countries</option>
+                    </select>
+                </div>
+
+                <div class="filter-field">
+                    <label for="start-date">Start Date</label>
+                    <input type="date" id="start-date">
+                </div>
+
+                <div class="filter-field">
+                    <label for="end-date">End Date</label>
+                    <input type="date" id="end-date">
+                </div>
+            </div>
+
+            <div class="filter-actions">
+                <button id="apply-filters" class="refresh-button">
+                    Apply Filters
+                </button>
+                <button id="reset-filters" class="reset-button">
+                    Reset
+                </button>
+            </div>
+
+            <p id="filter-message" class="filter-message" aria-live="polite"></p>
+        </section>
+
 
         <section class="kpi-grid">
             <article class="kpi-card">
